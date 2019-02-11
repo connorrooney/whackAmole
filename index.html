@@ -10,15 +10,36 @@
 <body>
     <div class="contnet">
       <div class="top">
-
-
+        <p>Score <span id="score"></span></p>
+        <p id=info></p>
+        <button id=start onclick="startGame()">Start</button>
+        <button id=pause onclick="pauseGame()">Pause</button>
+        <button id=resume onclick="resumeGame()">Resume</button>
       </div>
       <div class="main">
-
+        <div id=fieldA class=field>
+          <div class=mole id=A></div>
+        </div>
+        <div id=fieldB class=field>
+          <div class=mole id=B></div>
+        </div>
+        <div id=fieldC class=field>
+          <div class=mole id=C></div>
+        </div>
+        <div id=fieldD class=field>
+          <div class=mole id=D></div>
+        </div>
+        <div id=fieldE class=field>
+          <div class=mole id=E></div>
+        </div>
+        <div id=fieldF class=field>
+          <div class=mole id=F></div>
+        </div>
+        
 
       </div>
 
     </div>
-    <script src="app.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

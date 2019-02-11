@@ -1,0 +1,28 @@
+.field {
+    display: grid;
+    justify-content: center;
+    background-image: url(field.png);
+    height: 342px;
+    width: 659px;
+}
+
+.mole {
+    background-image: url(mrbump.png);
+    width: 314px;
+    height: 315px;
+    display: none;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 1fr 1fr;
+}
+
+#pause {
+    display: none;
+}
+
+#resume {
+    display: none;
+}
