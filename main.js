@@ -9,10 +9,10 @@ const scoreBoard = document.getElementById('score');
 
 let score = 0;
 let isClicked = false;
+let scorePlus = false;
 let hole;
 let loop;
 let peepL;
-let timeout;
 
 
 function holeGen() {
@@ -22,9 +22,11 @@ function holeGen() {
 
 function peep() {
     holeGen()
+    infoText.textContent = "The mole is coming!"
     moles[hole].style.display = "block";
     moles[hole].addEventListener('click', () => {
         isClicked = true;
+        scorePlus = true;
         infoText.textContent = "You hit the mole!";
         moles[hole].style.display = "none"
     });
@@ -50,10 +52,11 @@ function peepMiss() {
 }
 
 function scoreGen() {
-    if(isClicked == true){
+    if(scorePlus == true){
         score++;
         scoreBoard.textContent = score;
         moles[hole].style.display = "none";
+        scorePlus = false;
     }
 }
 
