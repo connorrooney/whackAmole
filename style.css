@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+body {
+    /* background: #318ce7; */
+    color: #f4f4f4;
+}
+
 .field {
     display: grid;
     justify-content: center;
@@ -19,6 +26,60 @@
     grid-template-areas: 1fr 1fr;
 }
 
+.top {
+    display: grid;
+    justify-content: center;
+    font-family: 'Acme', sans-serif;
+}
+
+.topInfo {
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-auto-rows: 1fr 1fr 1fr;
+}
+
+.score {
+    grid-column-start: 1;
+    background: #557185;
+    border: 3px solid #324056;
+    font-size: 1.5rem;
+    padding: 9px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.highscore {
+    grid-column-start: 2;
+    background: #557185;
+    border: 3px solid #324056;
+    border-radius: 7px;
+    padding: 6px;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+.info {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    color: #1a1c2c;
+    text-align: center;
+}
+
+.health {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #b14156;
+}
+
+.difficulty {
+    display: grid;
+    align-content: center;
+}
+
+#bigText {
+    font-size: 3.6rem;
+}
+
 #pause {
     display: none;
 }
@@ -29,4 +90,24 @@
 
 #difficultyCont {
     display: none;
+}
+
+#end {
+    display: none;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #557185;
+    border: 3px solid #324056;
+    border-radius: 5px;
+    color: #f4f4f4;
+    font-family: 'Acme', sans-serif;
+    font-size: 1rem;
+    margin: 2px;
+}
+
+button:active {
+    background-color: #324056;
+    border: 3px solid #557185;
 }
