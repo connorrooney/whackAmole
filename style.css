@@ -5,10 +5,17 @@ body {
     color: #f4f4f4;
 }
 
+.content {
+    height: ;
+}
+
+
+
 .field {
     display: grid;
     justify-content: center;
     background-image: url(field.png);
+    background-size: contain;
     height: 342px;
     width: 659px;
 }
@@ -18,7 +25,21 @@ body {
     width: 314px;
     height: 315px;
     display: none;
+    background-size: contain;
 }
+
+@media only screen and (min-width: 1px) and (max-width: 1700px) {
+    .field{
+        height: 171px;
+        width: 329px;
+        background-size: contain;
+    }
+    .mole {
+        width: 157px;
+        height: 156px;
+        background-size: contain;
+    }
+  }
 
 .main {
     display: grid;
@@ -112,4 +133,3 @@ button:active {
     border: 3px solid #557185;
 }
 
-/* push? */
