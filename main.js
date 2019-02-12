@@ -3,6 +3,11 @@ const pauseBtn = document.getElementById("pause");
 const resumeBtn = document.getElementById("resume");
 const infoText = document.getElementById("info");
 
+const easyBtn = document.getElementById("easy")
+const normalBtn = document.getElementById("normal")
+const hardBtn = document.getElementById("hard")
+const masterBtn = document.getElementById("master")
+
 const holes = document.querySelectorAll('.hole');
 const moles = document.querySelectorAll('.mole');
 const scoreBoard = document.getElementById('score');
@@ -13,6 +18,7 @@ let scorePlus = false;
 let hole;
 let loop;
 let peepL;
+let difficulty = 3000;
 
 
 function holeGen() {
@@ -30,7 +36,7 @@ function peep() {
         infoText.textContent = "You hit the mole!";
         moles[hole].style.display = "none"
     });
-    setTimeout('clickChecker()', 3000);
+    setTimeout('clickChecker()', difficulty);
 }
 
 function clickChecker() {
@@ -64,11 +70,33 @@ function gameUpdater() {
     scoreGen();
 }
 
+function gameDifficulty() {
+    document.getElementById("difficultyCont").style.display = "block";
+    easyBtn.addEventListener('click', () => {
+        difficulty = 3000;
+        startGame();
+    })
+    normalBtn.addEventListener('click', () => {
+        difficulty = 2200;
+        startGame();
+    })
+    hardBtn.addEventListener('click', () => {
+        difficulty = 1400;
+        startGame();
+    })
+    masterBtn.addEventListener('click', () => {
+        difficulty = 600;
+        startGame();
+    })
+}
+
+
 function startGame() {
     loop = setInterval("gameUpdater()", 10);
-    peepL = setInterval("peep()", 3500);
+    peepL = setInterval("peep()", difficulty);
     startBtn.style.display = "none";
     pauseBtn.style.display = "block";
+    document.getElementById("difficultyCont").style.display = "none";
 }
 
 function pauseGame() {
@@ -80,7 +108,7 @@ function pauseGame() {
 
 function resumeGame() {
     loop = setInterval("gameUpdater()", 10);
-    peepL = setInterval("peep()", 3500);
+    peepL = setInterval("peep()", difficulty);
     pauseBtn.style.display = "block";
     resumeBtn.style.display = "none";
 }

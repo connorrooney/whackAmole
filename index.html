@@ -12,9 +12,17 @@
       <div class="top">
         <p>Score <span id="score"></span></p>
         <p id=info></p>
-        <button id=start onclick="startGame()">Start</button>
+        <button id=start onclick="gameDifficulty()">Start</button>
         <button id=pause onclick="pauseGame()">Pause</button>
         <button id=resume onclick="resumeGame()">Resume</button>
+
+        <div id=difficultyCont>
+          <p>Select your difficulty</p>
+          <button id=easy>Easy</button>
+          <button id=normal>Normal</button>
+          <button id=hard>Hard</button>
+          <button id=master>Master</button>
+        </div>
       </div>
       <div class="main">
         <div id=fieldA class=field>
