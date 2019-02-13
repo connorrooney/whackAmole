@@ -5,7 +5,6 @@ const infoText = document.getElementById("info");
 const hiScoreBoard = document.getElementById("hiscore");
 const hiScoreBoardName = document.getElementById("hiscorehold");
 
-
 const easyBtn = document.getElementById("easy");
 const normalBtn = document.getElementById("normal");
 const hardBtn = document.getElementById("hard");
@@ -120,6 +119,7 @@ function gameDifficulty() {
 };
 
 function startGame() {
+    score = 0;
     loop = setInterval("gameUpdater()", 10);
     peepL = setInterval("peep()", difficulty);
     startBtn.style.display = "none";
